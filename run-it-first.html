@@ -109,16 +109,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 
   <!-- Hero Section -->
-  <section class="sb-section sb_hero">
+  <section class="sb-section sb_hero" style="position: relative; overflow: hidden;">
+    <!-- Scroll indicator -->
+    <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 10; animation: bounce 2s infinite;">
+      <div style="width: 30px; height: 50px; border: 2px solid rgba(121, 83, 255, 0.3); border-radius: 20px; position: relative;">
+        <div style="width: 6px; height: 10px; background: #7953FF; border-radius: 3px; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); animation: scroll-down 2s infinite;"></div>
+      </div>
+    </div>
     <div class="main-container sb_hero w-container">
       <div class="sb_landingcontainer">
-        <div>
-          <h1 class="sb_herotitle">Premium CTV creative—built for you. <span class="text-span-41">Pay only in months you run it.</span></h1>
-          <p class="sb_herotext1">Screenbridge transforms your existing social and UGC into broadcast-ready CTV + YouTube ads—crafted by experts, designed to perform.<br><strong>No upfront creative fees. No obligation to run.</strong></p>
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+          <!-- Badge -->
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: linear-gradient(135deg, rgba(121, 83, 255, 0.1), rgba(25, 86, 201, 0.1)); border: 1px solid rgba(121, 83, 255, 0.3); border-radius: 100px; margin-bottom: 24px;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 0L10.472 5.528L16 8L10.472 10.472L8 16L5.528 10.472L0 8L5.528 5.528L8 0Z" fill="#7953FF"/></svg>
+            <span style="font-size: 14px; font-weight: 700; color: #7953FF; letter-spacing: 0.5px;">RISK-FREE CREATIVE MODEL</span>
+          </div>
+          <h1 class="sb_herotitle" style="text-align: center;">Premium CTV creative—built for you. <span class="text-span-41">Pay only in months you run it.</span></h1>
+          <p class="sb_herotext1" style="text-align: center;">Screenbridge transforms your existing social and UGC into broadcast-ready CTV + YouTube ads—crafted by experts, designed to perform.<br><strong>No upfront creative fees. No obligation to run.</strong></p>
           
           <!-- Offer Callout Box -->
-          <div class="dropshadowcard" style="padding: 32px; margin-top: 32px; margin-bottom: 32px; background: linear-gradient(135deg, rgba(121, 83, 255, 0.05) 0%, rgba(25, 86, 201, 0.05) 100%); border: 1px solid rgba(121, 83, 255, 0.2);">
-            <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px; margin-top: 0;">Here's the deal:</h3>
+          <div class="dropshadowcard" style="padding: 32px; margin-top: 32px; margin-bottom: 32px; background: linear-gradient(135deg, rgba(121, 83, 255, 0.05) 0%, rgba(25, 86, 201, 0.05) 100%); border: 2px solid rgba(121, 83, 255, 0.3); box-shadow: 0 10px 40px rgba(121, 83, 255, 0.15); text-align: left;">
+            <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 24px; margin-top: 0; text-align: center;">Here's the deal:</h3>
             <div style="display: flex; flex-direction: column; gap: 12px;">
               <div style="display: flex; align-items: flex-start; gap: 12px;">
                 <img src="images/CheckIcon.svg" width="24" style="margin-top: 4px; flex-shrink: 0;">
@@ -135,14 +146,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
           </div>
 
-          <div class="sb_wrapperbottons">
-            <a data-lightbox="video-lightboxA" href="#" class="sb_mainbtnanim open-lightbox w-inline-block">
+          <div class="sb_wrapperbottons" style="justify-content: center;">
+            <a data-lightbox="video-lightboxA" href="#" class="sb_mainbtnanim open-lightbox w-inline-block" aria-label="Schedule a 15-minute introductory call">
               <div class="sb_mainbuttonanim">
                 <div class="sb_mainoverbg"></div>
                 <div class="sb_textbton">Book a 15-min intro call</div>
               </div>
             </a>
-            <a href="#work" class="sb_secondarybtn w-inline-block">
+            <a href="#work" class="sb_secondarybtn w-inline-block" aria-label="View example advertising work">
               <div class="sb_secondarybuttonanim">
                 <div class="sb_overbg"></div>
                 <div class="sb_textbton">View example ads</div>
@@ -158,9 +169,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </section>
 
   <!-- Trust Bar / Social Proof -->
-  <section class="sb_videosection">
+  <section class="sb_videosection" style="padding-top: 80px;">
     <div class="w-layout-blockcontainer main-container carrusel w-container">
-      <p class="sb_paragraph" style="text-align: center; margin-bottom: 24px; opacity: 0.8;">Trusted by brands that care about premium creative + performance.</p>
+      <div style="text-align: center; margin-bottom: 48px;">
+        <p class="sb_paragraph" style="font-size: 14px; font-weight: 700; color: #7953FF; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase;">Trusted by Leading Brands</p>
+        <h2 class="sb_herotitle2" style="font-size: 32px; margin-bottom: 16px;">Over <span class="sb_highlighttext">50+ brands</span> trust Screenbridge</h2>
+        <p class="sb_paragraph" style="opacity: 0.8;">From DTC startups to established brands—they all choose premium creative that performs.</p>
+      </div>
       <div class="sb_carousel">
         <div class="w-layout-blockcontainer main_container sb_carrusel w-container">
           <div class="dropshadow logos sb">
@@ -183,17 +198,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </section>
 
   <!-- See the Work Gallery -->
-  <section id="work" class="sb-section" style="padding-top: 120px;">
+  <section id="work" class="sb-section" style="padding-top: 120px; background: linear-gradient(180deg, rgba(67, 61, 164, 0.02) 0%, rgba(67, 61, 164, 0) 100%);">
     <div class="main-container w-container">
       <h2 class="sb_herotitle2" style="text-align: center; margin-bottom: 16px;">This is what <span class="sb_highlighttext">"premium, performance-first"</span> looks like.</h2>
-      <p class="sb_paragraph" style="text-align: center; max-width: 800px; margin: 0 auto 48px;">Same inputs you already have (UGC, social, internal footage) → elevated into TV-ready ads.</p>
-      <p class="sb_paragraph" style="text-align: center; font-size: 14px; margin-bottom: 32px; opacity: 0.8;"><strong>Click on any video to watch with SOUND ON!</strong></p>
+      <p class="sb_paragraph" style="text-align: center; max-width: 800px; margin: 0 auto 24px; font-size: 18px;">Same inputs you already have (UGC, social, internal footage) → elevated into TV-ready ads.</p>
       
-      <div class="sb_wrapperbottons" style="margin-bottom: 64px;">
-        <a href="work.html" class="sb_mainbtnanim w-inline-block">
+      <!-- Stats bar -->
+      <div style="display: flex; justify-content: center; gap: 48px; margin: 48px auto; padding: 32px; max-width: 800px; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div style="font-size: 48px; font-weight: 800; color: #7953FF; line-height: 1;">468+</div>
+          <p style="font-size: 14px; margin-top: 8px; opacity: 0.7;">Ads Created</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 48px; font-weight: 800; color: #1956C9; line-height: 1;">10-20</div>
+          <p style="font-size: 14px; margin-top: 8px; opacity: 0.7;">Days Turnaround</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 48px; font-weight: 800; color: #7953FF; line-height: 1;">2.5x</div>
+          <p style="font-size: 14px; margin-top: 8px; opacity: 0.7;">Avg. Performance Lift</p>
+        </div>
+      </div>
+      
+      <p class="sb_paragraph" style="text-align: center; font-size: 14px; margin-bottom: 32px; padding: 12px 24px; background: rgba(255, 127, 96, 0.1); border-radius: 8px; display: inline-block; margin-left: auto; margin-right: auto;">💡 <strong>Pro tip:</strong> Click on any ad to watch with SOUND ON!</p>
+      
+      <div class="sb_wrapperbottons" style="margin-bottom: 64px; justify-content: center;">
+        <a href="work.html" class="sb_mainbtnanim w-inline-block" aria-label="View full gallery of example ads">
           <div class="sb_mainbuttonanim">
             <div class="sb_mainoverbg"></div>
-            <div class="sb_textbton">View Full Gallery</div>
+            <div class="sb_textbton">View Full Gallery →</div>
           </div>
         </a>
       </div>
@@ -217,25 +249,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <h2 class="sb_herotitle2" style="text-align: center; margin-bottom: 16px;">How the <span class="sb_highlighttext">"Pay When You Run It"</span> model works</h2>
       <p class="sb_paragraph" style="text-align: center; max-width: 700px; margin: 0 auto 64px;"></p>
       
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 64px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 64px; position: relative;">
+        <!-- Connecting line (desktop only) -->
+        <div style="position: absolute; top: 32px; left: 15%; right: 15%; height: 2px; background: linear-gradient(90deg, transparent, #7953FF, #1956C9, transparent); z-index: 0; display: none;" class="step-connector"></div>
+        
         <!-- Step 1 -->
-        <div class="dropshadowcard" style="padding: 40px; text-align: center;">
-          <div style="width: 64px; height: 64px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, #1956C9, #6D53FF); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">1</div>
-          <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px;">We build your core ad (free)</h3>
+        <div class="dropshadowcard" style="padding: 40px; text-align: center; position: relative; z-index: 1; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(121,83,255,0.25)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow=''">
+          <div style="width: 64px; height: 64px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, #1956C9, #6D53FF); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white; box-shadow: 0 8px 24px rgba(121,83,255,0.4);">1</div>
+          <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px;">We build your core ad <span style="color: #7953FF;">(free)</span></h3>
           <p class="sb_paragraph">A premium 15s/30s CTV spot built from your existing UGC, social, or internal footage.</p>
         </div>
         
         <!-- Step 2 -->
-        <div class="dropshadowcard" style="padding: 40px; text-align: center;">
-          <div style="width: 64px; height: 64px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, #1956C9, #6D53FF); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">2</div>
-          <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px;">We build it as a versioned system</h3>
+        <div class="dropshadowcard" style="padding: 40px; text-align: center; position: relative; z-index: 1; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(121,83,255,0.25)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow=''">
+          <div style="width: 64px; height: 64px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, #1956C9, #6D53FF); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white; box-shadow: 0 8px 24px rgba(121,83,255,0.4);">2</div>
+          <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px;">We build it as a <span style="color: #1956C9;">versioned system</span></h3>
           <p class="sb_paragraph">Not a one-off. We design the spot so it's easy to refresh: new hooks, new messaging, new end cards, seasonal swaps.</p>
         </div>
         
         <!-- Step 3 -->
-        <div class="dropshadowcard" style="padding: 40px; text-align: center;">
-          <div style="width: 64px; height: 64px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, #1956C9, #6D53FF); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">3</div>
-          <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px;">You run it when you're ready</h3>
+        <div class="dropshadowcard" style="padding: 40px; text-align: center; position: relative; z-index: 1; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(121,83,255,0.25)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow=''">
+          <div style="width: 64px; height: 64px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, #1956C9, #6D53FF); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white; box-shadow: 0 8px 24px rgba(121,83,255,0.4);">3</div>
+          <h3 class="sb_herotitle2" style="font-size: 24px; margin-bottom: 16px;">You run it <span style="color: #7953FF;">when you're ready</span></h3>
           <p class="sb_paragraph">If it runs during a month, that month triggers the fee. If you pause it, billing pauses too.</p>
         </div>
       </div>
@@ -373,9 +408,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p class="sb_paragraph" style="text-align: center; max-width: 700px; margin: 0 auto 64px;"></p>
       
       <div class="dropshadowcard" style="max-width: 900px; margin: 0 auto; padding: 48px;">
-        <div style="display: flex; align-items: center; gap: 32px; margin-bottom: 32px;">
-          <img src="images/Mixbook.svg" alt="Mixbook Logo" width="200">
-          <div>
+        <div style="display: flex; align-items: center; gap: 32px; margin-bottom: 32px; flex-wrap: wrap;">
+          <img src="images/Mixbook.svg" alt="Mixbook Logo" style="width: 200px; max-width: 100%; height: auto;">
+          <div style="flex: 1; min-width: 200px;">
             <h3 class="sb_herotitle2" style="font-size: 20px; margin-bottom: 8px;">Brand Awareness → Visits</h3>
             <p class="sb_paragraph" style="font-size: 14px; opacity: 0.7;">E-commerce / Photo Books</p>
           </div>
@@ -815,6 +850,75 @@ document.addEventListener('DOMContentLoaded', () => {
   font-size: 30px;
   color: #211f38;
 }
+
+/* Scroll animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes scroll-down {
+  0% { opacity: 0; top: 8px; }
+  50% { opacity: 1; top: 16px; }
+  100% { opacity: 0; top: 24px; }
+}
+
+/* Mobile sticky CTA */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.98));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  z-index: 9998;
+  animation: slide-up 0.3s ease;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .mobile-sticky-cta {
+    display: block;
+  }
+  .step-connector {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .step-connector {
+    display: block !important;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus {
+  outline: 2px solid #7953FF;
+  outline-offset: 2px;
+}
   </style>
+  
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a data-lightbox="video-lightboxA" href="#" class="sb_mainbtnanim open-lightbox w-inline-block" style="width: 100%; display: block;" aria-label="Schedule a call now">
+      <div class="sb_mainbuttonanim">
+        <div class="sb_mainoverbg"></div>
+        <div class="sb_textbton">Get Started - Book a Call</div>
+      </div>
+    </a>
+  </div>
 </body>
 </html>
