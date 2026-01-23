@@ -425,7 +425,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </section>
 
   <!-- Positioning vs AI -->
-  <section class="sb-section">
+  <section class="sb-section rif-dark-section">
     <div class="main-container w-container">
       <h2 class="sb_herotitle2" style="text-align: center; margin-bottom: 48px;">Screenbridge is <span class="text-span-41">not</span> an AI video generator.</h2>
       
@@ -995,6 +995,60 @@ a:focus, button:focus {
 .sb_runitfirst #how-it-works .sb_herotitle2,
 .sb_runitfirst #how-it-works .sb_paragraph {
   color: #181a2a;
+}
+.sb_runitfirst #how-it-works .sb_paragraph {
+  font-size: 18px;
+}
+.sb_runitfirst .rif-steps {
+  max-width: 1100px;
+  margin: 0 auto 64px;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 32px;
+}
+.sb_runitfirst .rif-step-card {
+  min-height: 360px;
+  padding: 38px 32px;
+}
+.sb_runitfirst .rif-step-card .sb_herotitle2 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+.sb_runitfirst .rif-step-card .sb_paragraph {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.sb_runitfirst .rif-dark-section {
+  background: linear-gradient(180deg, #17153c 0%, #201c56 100%);
+  color: #f7f8ff;
+}
+.sb_runitfirst .rif-dark-section .sb_herotitle2,
+.sb_runitfirst .rif-dark-section .sb_paragraph {
+  color: #f7f8ff;
+}
+.sb_runitfirst .rif-dark-section .text-span-41 {
+  color: #ff8d73;
+}
+.sb_runitfirst .rif-dark-section .rif-pillars > div {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.sb_runitfirst .rif-dark-section .rif-pillars .sb_paragraph {
+  color: rgba(247, 248, 255, 0.88);
+}
+
+@media (max-width: 991px) {
+  .sb_runitfirst .rif-steps {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .sb_runitfirst .rif-steps {
+    grid-template-columns: 1fr;
+  }
+  .sb_runitfirst .rif-step-card {
+    min-height: auto;
+  }
 }
 .sb_runitfirst .rif-callout {
   background: rgba(255, 255, 255, 0.96);
