@@ -750,9 +750,9 @@ const sliderInterval = setInterval(() => {
   </section>
   
   <!-- Creative Free Model Section -->
-  <section class="sb-section sb-creativefree-section" style="background: linear-gradient(120deg, #f6f7fb 0%, #e9e6ff 100%); position: relative; overflow: hidden; padding: 72px 0 72px 0;">
+  <section class="sb-section sb-creativefree-section">
     <div class="main-container w-container" style="max-width: 1200px; margin: 0 auto;">
-      <div class="sb-creativefree-inner" style="display: flex; flex-wrap: wrap; gap: 56px; align-items: stretch; justify-content: space-between;">
+      <div class="sb-creativefree-inner">
           <!-- Left Column: Content -->
           <div>
             <div class="sb-badge-newmodel" style="display: inline-block; padding: 7px 18px; background: linear-gradient(90deg, #7953FF 0%, #1956C9 100%); border-radius: 100px; margin-bottom: 28px; box-shadow: 0 2px 8px rgba(121,83,255,0.10);">
@@ -807,25 +807,30 @@ const sliderInterval = setInterval(() => {
           </div>
           
           <!-- Right Column: Visual Element -->
-          <div style="position: relative; min-width: 340px; flex: 1 1 340px; max-width: 420px; display: flex; align-items: center; justify-content: center;">
-            <div class="sb-comparison-card" style="display: flex; flex-direction: column; gap: 0; background: #fff; border-radius: 28px; box-shadow: 0 8px 32px rgba(121,83,255,0.10), 0 1.5px 8px rgba(25,86,201,0.07); overflow: hidden; width: 100%; max-width: 400px;">
-              <div style="display: flex; flex-direction: row;">
-                <div style="flex: 1; padding: 36px 24px 36px 32px; border-right: 2px solid #F2F2F7; text-align: center; background: #F8F7FC;">
-                  <div style="font-size: 17px; font-weight: 700; color: #7953FF; margin-bottom: 8px;">Traditional</div>
-                  <div style="font-size: 38px; font-weight: 800; color: #181A2A; margin-bottom: 6px; letter-spacing: -1px;">$4,495</div>
-                  <div style="font-size: 13px; color: #6B6B8A;">upfront payment</div>
+          <div class="cf-visual">
+            <div class="cf-compare">
+              <div class="cf-compare-top">
+                <div class="cf-compare-title">Upfront cost comparison</div>
+                <div class="cf-savings">Save $4,495 upfront</div>
+              </div>
+              <div class="cf-compare-grid">
+                <div class="cf-card cf-card--traditional">
+                  <div class="cf-card-label">Traditional model</div>
+                  <div class="cf-card-price">$4,495</div>
+                  <div class="cf-card-meta">upfront payment</div>
                 </div>
-                <div style="flex: 1; padding: 36px 32px 36px 24px; text-align: center; background: #fff;">
-                  <div style="font-size: 17px; font-weight: 700; color: #FF7A59; margin-bottom: 8px;">Creative Free</div>
-                  <div style="font-size: 38px; font-weight: 800; color: #FF7A59; margin-bottom: 6px; letter-spacing: -1px;">$0</div>
-                  <div style="font-size: 13px; color: #6B6B8A;">upfront</div>
-                  <div style="font-size: 15px; color: #181A2A; font-weight: 600; margin-top: 8px;">+ $3,000/mo when live</div>
+                <div class="cf-card cf-card--creative">
+                  <div class="cf-card-label">Creative Free</div>
+                  <div class="cf-card-price">$0</div>
+                  <div class="cf-card-meta">upfront</div>
+                  <div class="cf-card-sub">+ $3,000/mo when live</div>
+                  <div class="cf-card-badge">Best value</div>
                 </div>
               </div>
-              <div style="width: 100%; text-align: center; background: #F2F2F7; color: #7953FF; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 0;">Which would you choose?</div>
+              <div class="cf-compare-foot">Pay only when the ad runs</div>
+              <div class="cf-vs">vs</div>
             </div>
-            <!-- Decorative gradient blob -->
-            <div style="position: absolute; top: -40px; right: -40px; width: 180px; height: 180px; background: linear-gradient(135deg, rgba(255, 122, 89, 0.13), rgba(121, 83, 255, 0.13)); border-radius: 50%; filter: blur(36px); z-index: 1;"></div>
+            <div class="cf-glow" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -833,32 +838,207 @@ const sliderInterval = setInterval(() => {
     
     <!-- Mobile responsive styles -->
     <style>
+      .sb-creativefree-section {
+        --cf-accent: #ff7a59;
+        --cf-indigo: #4b5bff;
+        --cf-ink: #171a2b;
+        --cf-muted: #5c5f77;
+        background:
+          radial-gradient(900px 420px at 8% -10%, rgba(255, 231, 221, 0.75) 0%, rgba(255, 231, 221, 0) 60%),
+          radial-gradient(700px 380px at 92% 0%, rgba(224, 231, 255, 0.85) 0%, rgba(224, 231, 255, 0) 65%),
+          linear-gradient(120deg, #f9faff 0%, #eeebff 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 80px 0;
+      }
       /* Responsive for Creative Free Section */
       .sb-creativefree-section .sb-creativefree-inner {
         display: flex;
         flex-wrap: wrap;
-        gap: 56px;
-        align-items: stretch;
+        gap: 64px;
+        align-items: center;
         justify-content: space-between;
+      }
+      .cf-visual {
+        position: relative;
+        min-width: 340px;
+        flex: 1 1 360px;
+        max-width: 460px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cf-compare {
+        width: 100%;
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 28px;
+        box-shadow: 0 18px 45px rgba(37, 44, 103, 0.18), 0 6px 18px rgba(37, 44, 103, 0.08);
+        border: 1px solid rgba(75, 91, 255, 0.14);
+        position: relative;
+        isolation: isolate;
+      }
+      .cf-compare::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border-radius: 22px;
+        border: 1px dashed rgba(75, 91, 255, 0.18);
+        pointer-events: none;
+      }
+      .cf-compare-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .cf-compare-title {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--cf-muted);
+      }
+      .cf-savings {
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(135deg, #ff7a59, #ffb199);
+        padding: 6px 12px;
+        border-radius: 999px;
+        box-shadow: 0 8px 18px rgba(255, 122, 89, 0.22);
+      }
+      .cf-compare-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .cf-card {
+        position: relative;
+        border-radius: 18px;
+        padding: 20px 18px 18px;
+        background: #f6f7ff;
+        border: 1px solid #e1e4ff;
+      }
+      .cf-card--traditional {
+        background: #f7f7fb;
+        border: 1px solid #e7e7f3;
+      }
+      .cf-card--creative {
+        background: linear-gradient(180deg, #fff4ef 0%, #fff8f5 100%);
+        border: 1px solid rgba(255, 122, 89, 0.35);
+        box-shadow: 0 14px 30px rgba(255, 122, 89, 0.12);
+      }
+      .cf-card-label {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--cf-muted);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .cf-card-price {
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--cf-ink);
+        letter-spacing: -1px;
+        margin-bottom: 6px;
+      }
+      .cf-card--creative .cf-card-price {
+        color: #ff7a59;
+      }
+      .cf-card-meta {
+        font-size: 13px;
+        color: var(--cf-muted);
+      }
+      .cf-card-sub {
+        font-size: 14px;
+        color: var(--cf-ink);
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      .cf-card-badge {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #fff;
+        background: linear-gradient(135deg, #ff7a59, #ff4d8a);
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+      .cf-compare-foot {
+        margin-top: 18px;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--cf-indigo);
+        background: #f2f4ff;
+        padding: 12px 14px;
+        border-radius: 14px;
+        text-align: center;
+      }
+      .cf-vs {
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid rgba(75, 91, 255, 0.25);
+        color: var(--cf-indigo);
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        text-transform: uppercase;
+        box-shadow: 0 6px 16px rgba(37, 44, 103, 0.12);
+      }
+      .cf-glow {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle at 30% 30%, rgba(255, 122, 89, 0.25), rgba(75, 91, 255, 0.15) 65%, rgba(75, 91, 255, 0) 75%);
+        filter: blur(30px);
+        z-index: -1;
       }
       @media (max-width: 991px) {
         .sb-creativefree-section .sb-creativefree-inner {
           flex-direction: column;
           gap: 36px;
         }
-        .sb-comparison-card {
-          max-width: 100% !important;
+        .cf-visual {
+          max-width: 100%;
         }
       }
       @media (max-width: 600px) {
         .sb-creativefree-section {
-          padding: 36px 0 36px 0 !important;
+          padding: 40px 0 !important;
         }
         .sb-creativefree-section .sb-creativefree-inner {
           gap: 24px;
         }
-        .sb-comparison-card {
+        .cf-compare {
           border-radius: 18px !important;
+        }
+        .cf-compare::before {
+          inset: 10px;
+        }
+        .cf-compare-grid {
+          grid-template-columns: 1fr;
+        }
+        .cf-vs {
+          display: none;
         }
         .sb-featurelist-modern li div {
           font-size: 16px !important;
