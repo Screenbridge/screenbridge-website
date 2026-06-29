@@ -13,3 +13,5 @@ tmp/
 # Static-site export — no node build, but ignore these if a host adds them
 node_modules/
 .vercel/
+.vercel
+dist/
