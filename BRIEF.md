@@ -37,6 +37,16 @@ flat file. Mobile-first, fully responsive.
 8. Testimonials — Cheribundi, Mixbook, Harry's (real quotes)
 9. FAQ · 10. Final CTA · 11. Footer
 
+## Study the original first
+
+The original Webflow site's exact structure, copy, and section order live in
+`reference/webflow/` (index, work, ctv-media-buying-services, case-studies,
+legal). Original styling is in `public/css/screenbridge.webflow.css`; all images
+and videos are in `public/`. Read these to see how the current page is organized
+before rebuilding. Live reference: https://www.screenbridge.tv and
+https://reach.screenbridge.tv (target quality). Match structure to reach,
+content to screenbridge.tv.
+
 ## Rules
 
 - Honest copy only — no fabricated metrics.
