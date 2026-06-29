@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Logs / temp
+*.log
+.cache/
+tmp/
+
+# Static-site export — no node build, but ignore these if a host adds them
+node_modules/
+.vercel/
